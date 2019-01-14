@@ -1,0 +1,22 @@
+头像（主色调）：88abda
+字的蓝色：709bc9
+按钮天蓝：5cacee
+链接蓝：1a26bf （雅黑）
+
+字：#333
+线：#e0 #c0
+灰（top 背景等）：f6f6f6
+背景上的浅灰：cfcfcf
+动态文字的颜色：2a2a2a
+浅灰：7b7b7b
+图标的灰：bfbfbf
+深灰（搜索框背景、灰色字体等）：e5e5e5
+
+动态分享：d8dcee
+
+浅紫：#d8dcee
+
+浅粉色：#f0a4b1
+
+z-index
+navi set letter:50

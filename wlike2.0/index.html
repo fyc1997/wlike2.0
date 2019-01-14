@@ -1,0 +1,306 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>我是一个小可爱</title>
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+body {
+	font-family: "Microsoft YaHei","幼圆","宋体";
+	font-size:14px;
+	margin:0px;
+	background:#f6f6f6;
+}
+</style>
+</head>
+<script>
+	window.onload=function(){top_head();gainHeight();}
+	window.onresize=function(){top_head();}
+</script>
+<script src="js/jquery.min.js"></script>
+<script src="js/with.js"></script>
+<body>
+	<div id="side_top">
+        <div id="top_left" oncontextmenu="return false" onselectstart="return false">
+        	<div id="top_welcome">欢迎来到<span style="font-family:Arial;">Wlike</span></div>
+            <div class="top_icon">
+            	<img id="naviClose" src="images/navi.png" onclick="openNavi(1)" onmouseover="this.src='images/naviBlue.png'" onmouseout="this.src='images/navi.png'"//>
+                <img id="naviShow" src="images/close2.png" onclick="openNavi(0)"/>
+                <img class="topIcon middleIcon" src="images/set.png" onclick="openSetOrLetter('set')" onmouseover="this.src='images/setBlue.png'" onmouseout="this.src='images/set.png'"/>
+                <img class="topIcon" src="images/letter.png" onclick="openSetOrLetter('letter')" onmouseover="this.src='images/letterBlue.png'" onmouseout="this.src='images/letter.png'"/>
+            </div>
+        </div>
+        <div id="top_mid" oncontextmenu="return false" onselectstart="return false">
+            <div id="headNname">
+            	<img class="userHead" src="images/1.jpeg"/>
+                <span class="top_user_name">他吃个大便菜<i id="user_tip"></i></span>
+            </div>
+            <table width="180" border="0" cellpadding="0" cellspacing="0" align="center" style="margin-top:65px;">
+                <tr>
+                    <td class="user_info">33
+                        <div id="user_info_char">关注</div></td>
+                    <td class="user_info middle">45
+                        <div id="user_info_char">粉丝</div></td>
+                    <td class="user_info">23
+                        <div id="user_info_char">动态</div></td>
+                </tr>
+            </table>
+        </div>
+        <div id="top_right">
+            <div id="search">
+                <input type="text" placeholder="找找用户 动态 兴趣圈" name="topSearch" id="topSearch"></input>
+                <button type="submit" />
+            </div>
+            <div id="top_history">
+                <span>历史：java | python | csgo | 绝地逃生...</span>
+            </div>
+        </div>
+	</div>
+	<div id="main_mid">
+   		<div id="main_pillar"></div>
+        <div class="main_share">
+        	<div class="share_user_head"><img class="main_userHead" src="images/1.jpeg"/></div>
+            <div class="share_user_name">你爱吃大白菜</div>
+            <div class="share_hyphen"></div>
+            <div class="share_time">12月14日 14:12<span>发布于个人</span></div>
+                <div class="share_content">
+                    <div class="share_main_left2">
+                        <div class="content_char">【朴树唱送别泣不成声 网友：人到中年却还活得像个少年 一定很不容易吧】<br/>朴树在《大事发声》上翻唱李叔同的经典《送别》。这不是一个完整的表演，因为他唱到一半情难自已，泣不成声。他曾说此生若能写出这样的歌那死而无憾。这首歌会让你想起什么呢？</div>
+                        <div class="content_pic">
+                         	
+                        </div>
+                    </div>
+                    <div class="share_main_right2">
+                        <div class="content_select2">
+                            <div class="contentSelect2">
+                                <div class="select_num1" onmouseover="naviIconChange(this)" onmouseout="naviIcon(this)"><img class="select_icon" src="images/point.png"/>342</div>
+                            </div>
+                            <div class="contentSelect2">
+                                <div class="select_num2" onmouseover="naviIconChange(this)" onmouseout="naviIcon(this)"><img class="select_icon" src="images/content.png"/>1.5万</div>
+                            </div>
+                            <div class="contentSelect2">
+                                <div class="select_num3" onmouseover="naviIconChange(this)" onmouseout="naviIcon(this)"><img class="select_icon" src="images/repost.png"/>5161</div>
+                            </div>
+                            <div class="contentSelect2">
+                                <div class="select_num4" onmouseover="naviIconChange(this)" onmouseout="naviIcon(this)"><img class="select_icon" src="images/keep.png"/>收藏</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="main_share">
+        	<div class="share_user_head"><img class="main_userHead" src="images/1.jpeg"/></div>
+            <div class="share_user_name">你爱吃大白菜</div>
+            <div class="share_hyphen"></div>
+            <div class="share_time">12月14日 14:12<span>发布于<span>#朴树比李钟硕帅</span></span></div>
+                <div class="share_content">
+                    <div class="share_main_left">
+                        <div class="content_char">【朴树唱送别泣不成声 网友：人到中年却还活得像个少年 一定很不容易吧】<br/>朴树在《大事发声》上翻唱李叔同的经典《送别》。这不是一个完整的表演，因为他唱到一半情难自已，泣不成声。他曾说此生若能写出这样的歌那死而无憾。这首歌会让你想起什么呢？#男朋友宠你能宠到什么程度# </div>
+                        <div class="content_pic">
+                            <img class="contentPic" src="images/2.jpeg"/>
+                            <img class="contentPic" src="images/2.jpeg"/>
+                            <img class="contentPic" src="images/2.jpeg"/>
+                            <img class="contentPic" src="images/2.jpeg"/>
+                           
+                        </div>
+                    </div>
+                    <div class="share_main_right">
+                        <div class="content_select">
+                            <div class="contentSelect">
+                                <div class="select_num1" onmouseover="naviIconChange(this)" onmouseout="naviIcon(this)"><img class="select_icon" src="images/point.png"/>342</div>
+                            </div>
+                            <div class="contentSelect">
+                                <div class="select_num2" onmouseover="naviIconChange(this)" onmouseout="naviIcon(this)"><img class="select_icon" src="images/content.png"/>1.5万</div>
+                            </div>
+                            <div class="contentSelect">
+                                <div class="select_num3" onmouseover="naviIconChange(this)" onmouseout="naviIcon(this)"><img class="select_icon" src="images/repost.png"/>5161</div>
+                            </div>
+                            <div class="contentSelect">
+                                <div class="select_num4" onmouseover="naviIconChange(this)" onmouseout="naviIcon(this)"><img class="select_icon" src="images/keep.png"/>收藏</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div id="navi" oncontextmenu="return false" onselectstart="return false">
+    	<div class="navi_logo"></div>
+        <div id="navi_index" style="margin-top:20px;" onmouseover="naviIconChange(this)" onmouseout="naviIcon(this)">
+        	<img id="navi_icon" src="images/index.png"/>
+            <div class="navi_select">首页</div>
+        </div>
+        <div id="navi_special" onmouseover="naviIconChange(this)" onmouseout="naviIcon(this)">
+            <img id="navi_icon" src="images/special.png"/>
+            <div class="navi_select">兴趣圈精选</div>
+        </div>
+        <div id="navi_hot" onmouseover="naviIconChange(this)" onmouseout="naviIcon(this)">
+            <img id="navi_icon" src="images/hot.png"/>
+            <div class="navi_select">热门动态</div>
+        </div>
+        <div class="navi_line"></div>
+        <div id="navi_info" onclick="openNaviInfo('navi_info_two','navi_closed1','navi_opened1')" onmouseover="naviIconChange(this),openSelect('navi_closed1','navi_opened1','naviClosed1','naviClosed12','naviOpened1','naviOpened12')" onmouseout="naviIcon(this),closeSelect('navi_closed1','navi_opened1','naviClosed1','naviClosed12','naviOpened1','naviOpened12')">
+        	<img id="navi_icon" src="images/me.png"/>
+            <div class="navi_select">我的库</div>
+            <div id="navi_closed1">
+            	<img id="naviClosed1" src="images/closed.png"/>
+                <img id="naviClosed12" src="images/closedBlue.png"/>
+            </div>
+            <div id="navi_opened1">
+            	<img id="naviOpened1" src="images/opened.png"/>
+                <img id="naviOpened12" src="images/openedBlue.png"/>
+            </div>
+        </div>
+        <div id="navi_info_two">
+            <div class="navi_select_two">◾ 我的收藏</div>
+            <div class="navi_select_two">◾ 素材库</div>
+            <div class="navi_select_two">◾ 个人资料</div>
+        </div>
+        <div class="navi_line"></div>
+        <div id="navi_club" onclick="openNaviInfo('navi_club_two','navi_closed2','navi_opened2')" onmouseover="naviIconChange(this),openSelect('navi_closed2','navi_opened2','naviClosed2','naviClosed22','naviOpened2','naviOpened22')" onmouseout="naviIcon(this),closeSelect('navi_closed2','navi_opened2','naviClosed2','naviClosed22','naviOpened2','naviOpened22')">
+        	<img id="navi_icon" src="images/hobby.png"/>
+            <div class="navi_select">兴趣圈</div>
+            <div id="navi_closed2">
+            	<img id="naviClosed2" src="images/closed.png"/>
+                <img id="naviClosed22" src="images/closedBlue.png"/>
+            </div>
+            <div id="navi_opened2">
+            	<img id="naviOpened2" src="images/opened.png"/>
+                <img id="naviOpened22" src="images/openedBlue.png"/>
+            </div>
+        </div>
+        <div id="navi_club_two">
+            <div class="navi_select_two">◾ 我创建的</div>
+            <div class="navi_select_two">◾ 我加入的</div>
+            <div class="navi_select_two">◾ 我关注的</div>
+        </div>
+        <div class="navi_line"></div>
+        <div id="navi_friend" onclick="openNaviInfo('navi_friend_two','navi_closed3','navi_opened3')" onmouseover="naviIconChange(this),openSelect('navi_closed3','navi_opened3','naviClosed3','naviClosed32','naviOpened3','naviOpened32')" onmouseout="naviIcon(this),closeSelect('navi_closed3','navi_opened3','naviClosed3','naviClosed32','naviOpened3','naviOpened32')">
+        	<img id="navi_icon" src="images/friend.png"/>
+            <div class="navi_select">朋友圈</div>
+            <div id="navi_closed3">
+            	<img id="naviClosed3" src="images/closed.png"/>
+                <img id="naviClosed32" src="images/closedBlue.png"/>
+            </div>
+            <div id="navi_opened3">
+            	<img id="naviOpened3" src="images/opened.png"/>
+                <img id="naviOpened32" src="images/openedBlue.png"/>
+            </div>
+        </div>
+        <div id="navi_friend_two">
+            <div class="navi_select_two">◾ 我的好友</div>
+            <div class="navi_select_two">◾ 我关注的</div>
+            <div class="navi_select_two">◾ 兴趣相投</div>
+        </div>
+    </div>
+    <div id="set">
+    </div>
+    <div id="letter">
+    	<div class="letter_top">消息</div>
+        <div class="letter_navi">动态</div>
+        <div class="letter_navi">私聊</div>
+        <div class="letter_navi">星标</div>
+        <div class="letter_navi">提醒</div>
+    </div>
+    <div id="right_part_club">
+        <div class="part_top">
+            <div class="part_title">我的兴趣圈<img class="closeRightPart" src="images/closeRightPart.png" onclick="openRightIcon('right_part_club','my_club','close')"/></div>
+        </div>
+        <div class="part_content">
+            <div class="part_all" oncontextmenu="return false" onselectstart="return false">共<b id="part_num">6</b>个</div>
+            <div class="part_select" oncontextmenu="return false" onselectstart="return false">
+                <div class="club_select">我加入的</div>
+                <div class="club_select">我关注的</div>
+                <div class="club_select">我创建的</div>
+            </div>
+            <div class="part_list" oncontextmenu="return false" onselectstart="return false">全部</div>
+            <div class="club_main">
+                <div class="club_list">#模电数电工数三巨头<i id="tip"></i></div>
+                <div class="club_list">#茶山钓凯子<i id="tip"></i></div>
+                <div class="club_list">#Android开发讨论<i id="tip" style="display:none;"></i></div>
+                <div class="club_list">#模电数电工数三巨头<i id="tip" style="display:none;"></i></div>
+                <div class="club_list">#茶山钓凯子<i id="tip"></i></div>
+                <div class="club_list">#Android开发讨论<i id="tip"></i></div>
+            </div>
+            <div style="margin-left:5px;text-align:center;" oncontextmenu="return false" onselectstart="return false">
+                <img id="selLeft" src="images/left.png" onmouseover="this.src='images/leftBlue.png'" onmouseout="this.src='images/left.png'"/>
+                <img id="selRight" src="images/right.png" onmouseover="this.src='images/rightBlue.png'" onmouseout="this.src='images/right.png'"/>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div id="right_part_friend">
+        <div class="part_top">
+            <div class="part_title">我的朋友圈<img class="closeRightPart" src="images/closeRightPart.png" onclick="openRightIcon('right_part_friend','my_friend','close')"/></div>
+        </div>
+        <div class="part_content">
+            <div class="part_all" oncontextmenu="return false" onselectstart="return false"><b id="part_num" style="font-size:50px;">36</b>人</div>
+            <div class="part_select" oncontextmenu="return false" onselectstart="return false">
+                <div class="friend_selected">我的好友</div>
+                <div class="friend_select" onmouseover="iconChangeBlue('changeIcon')" onmouseout="iconChange('changeIcon')"><img id="changeIcon" style="width:20px;height:20px;" src="images/change.png"/><div>我的关注</div></div>
+            </div>
+            <div class="friend_main">
+               <div class="friend_list">
+                    <div class="friend_user_head"><img class="friend_userHead" src="images/1.jpeg"/></div>
+                    <div class="friend_user_name">你爱吃大白菜</div>
+                    <div class="friend_chat_history">我：这里空间有点挤！</div>
+                    <img class="friend_chat1" src="images/chat.png" onmouseover="iconChangeBlue('friend_chat','1')" onmouseout="iconChange('friend_chat','1')"/>
+                    <div class="friend_chat_char1" onmouseover="iconChangeBlue('friend_chat','1')" onmouseout="iconChange('friend_chat','1')">聊天</div>
+               </div>
+               <div class="friend_line"></div>
+               <div class="friend_list">
+                    <div class="friend_user_head"><img class="friend_userHead" src="images/1.jpeg"/></div>
+                    <div class="friend_user_name">你爱吃大白菜</div>
+                    <div class="friend_chat_history">我：这里空间有点挤！</div>
+                    <img class="friend_chat2" src="images/chat.png" onmouseover="iconChangeBlue('friend_chat','2')" onmouseout="iconChange('friend_chat','2')"/>
+                    <div class="friend_chat_char2" onmouseover="iconChangeBlue('friend_chat','2')" onmouseout="iconChange('friend_chat','2')">聊天</div>
+               </div>
+               <div class="friend_line"></div>
+               <div class="friend_list">
+                    <div class="friend_user_head"><img class="friend_userHead" src="images/1.jpeg"/></div>
+                    <div class="friend_user_name">你爱吃大白菜</div>
+                    <div class="friend_chat_history">我：这里空间有点挤！</div>
+                    <img class="friend_chat3" src="images/chat.png" onmouseover="iconChangeBlue('friend_chat','3')" onmouseout="iconChange('friend_chat','3')"/>
+                    <div class="friend_chat_char3" onmouseover="iconChangeBlue('friend_chat','3')" onmouseout="iconChange('friend_chat','3')">聊天</div>
+               </div>
+               <div class="friend_line"></div>
+               <div class="friend_list">
+                    <div class="friend_user_head"><img class="friend_userHead" src="images/1.jpeg"/></div>
+                    <div class="friend_user_name">你爱吃大白菜</div>
+                    <div class="friend_chat_history">我：这里空间有点挤！</div>
+                    <img class="friend_chat4" src="images/chat.png" onmouseover="iconChangeBlue('friend_chat','4')" onmouseout="iconChange('friend_chat','4')"/>
+                    <div class="friend_chat_char4" onmouseover="iconChangeBlue('friend_chat','4')" onmouseout="iconChange('friend_chat','4')">聊天</div>
+               </div>
+            </div>
+            <div style="margin-left:5px;text-align:center;" oncontextmenu="return false" onselectstart="return false">
+                <img id="selLeft" src="images/left.png" onmouseover="this.src='images/leftBlue.png'" onmouseout="this.src='images/left.png'"/>
+                <img id="selRight" src="images/right.png" onmouseover="this.src='images/rightBlue.png'" onmouseout="this.src='images/right.png'"/>
+            </div>
+        </div>
+      </div>  
+    </div>
+    <div id="my_club" onclick="openRightIcon('my_club','right_part_club','open')">
+    	<div id="myClub">
+        	<img class="rightIcon" src="images/myClub.png"/>
+            <div class="rightChar">我的兴趣圈</div>
+        </div>
+    </div>
+    <div id="my_friend" onclick="openRightIcon('my_friend','right_part_friend','open')">
+    	<div id="myFriend">
+        	<img class="rightIcon" src="images/myFriend.png" style="width:28px;height:28px;padding:7px 10px 7px 7px;"/>
+            <div class="rightChar">我的好友</div>
+        </div>
+    </div>
+    <!--<div id="my_recommend">
+    	<div id="myRecommend">
+        	<img class="rightIcon" src="images/recommend.png" style="width:28px;height:28px;padding:7px 10px 7px 7px;"/>
+            <div class="rightChar">热门推荐</div>
+        </div>
+    </div>-->
+    <div id="float_icon">
+        <div id="write"><div class="goOpen">分享动态</div><img class="floatIcon" src="images/write.png"/><img class="floatIconTwo" src="images/writeWhite.png"/></div>
+        <div id="add"><div class="goOpen">创建圈子</div><img class="floatIcon" src="images/add.png"/><img class="floatIconTwo" src="images/addWhite.png"/></div>   
+        <div id="top" onclick="beTop()"><div class="goOpen">回到顶部</div><img class="floatIcon" src="images/top.png"/><img class="floatIconTwo" src="images/topWhite.png"/></div>      
+    </div>
+</body>
+</html>
